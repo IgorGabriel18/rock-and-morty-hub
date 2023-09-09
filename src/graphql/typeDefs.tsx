@@ -38,23 +38,7 @@ export const CHARACTERS_QUERY = gql`
                 name
                 status
                 species
-                gender
-                origin {
-                    id
-                    name
-                    dimension
-                }
-                location {
-                    id
-                    name
-                    dimension
-                }
                 image
-                episode {
-                    id
-                    name
-                    episode
-                }
             }
         }
     }

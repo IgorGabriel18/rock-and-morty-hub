@@ -4,6 +4,7 @@ export const Footer = styled.footer`
     ${({ theme }) => css`
         width: min(100%, ${theme.screen.max_width});
         height: min-content;
+        margin-top: auto;
         padding: ${theme.spacing.mega} ${theme.spacing.md};
         display: grid;
         grid: repeat(2, min-content) / repeat(3, max-content);

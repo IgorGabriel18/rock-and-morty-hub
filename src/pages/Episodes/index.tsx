@@ -1,7 +1,27 @@
+import { ContentSection } from "~components/ContentSection";
+import { DatatHub } from "~components/DatatHub";
+import { EpisodeCard } from "~components/DatatHub/EpisodeCard";
 import { useRickAndMorty } from "~hooks/useRickAndMorty";
 
 export function Episodes() {
     const { loading, error, data, page, handleSetPage } = useRickAndMorty({ queryType: "episodes" });
 
-    return <h1>Episodes</h1>;
+    return (
+        <ContentSection isTopOfPage>
+            <DatatHub
+                loading={loading}
+                error={error ? true : false}
+                page={page}
+                setPage={handleSetPage}
+                {...data?.characters?.info!}
+            >
+                {data?.episodes?.results.map((item) => (
+                    <EpisodeCard
+                        key={item.id}
+                        {...item}
+                    />
+                ))}
+            </DatatHub>
+        </ContentSection>
+    );
 }
