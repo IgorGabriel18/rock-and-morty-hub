@@ -6,5 +6,5 @@ interface IStatusProps {
 }
 
 export function Status({ loading, error }: IStatusProps) {
-    return loading ? <S.StatusLoader /> : error && <S.StatusErrorMessage>No data found!</S.StatusErrorMessage>;
+    return loading ? <S.StatusLoader /> : error ? <S.StatusErrorMessage>No data found!</S.StatusErrorMessage> : null;
 }
