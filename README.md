@@ -14,6 +14,7 @@ DESCRIPTION
 -   TypeScript
 -   Styled-components
 -   GraphQL
+-   React Query
 
 ## User-Focused Features
 
