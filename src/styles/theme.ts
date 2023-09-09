@@ -24,12 +24,6 @@ export const theme = {
             xl: "75rem",
             xxl: "90rem",
             mega: "120rem"
-        },
-        zIndex: {
-            primary: 10,
-            secondary: 20,
-            tertiary: 30,
-            quaternary: 400
         }
     },
     spacing: {
