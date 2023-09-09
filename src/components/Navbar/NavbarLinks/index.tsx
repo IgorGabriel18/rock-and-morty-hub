@@ -14,20 +14,18 @@ export function NavbarLinks({ show, toggleVisibility }: INavbarLinksProps) {
 
     const pathsWithTitle = navigationRoutesConfig.filter((path) => path.title);
 
-    return (
-        show && (
-            <S.NavbarLinks>
-                {pathsWithTitle.map(({ path, title }) => (
-                    <S.NavbarLinksButton
-                        key={path}
-                        to={path}
-                        onClick={toggleVisibility}
-                        $isHighlight={pathname === path}
-                    >
-                        {title}
-                    </S.NavbarLinksButton>
-                ))}
-            </S.NavbarLinks>
-        )
-    );
+    return show ? (
+        <S.NavbarLinks>
+            {pathsWithTitle.map(({ path, title }) => (
+                <S.NavbarLinksButton
+                    key={path}
+                    to={path}
+                    onClick={toggleVisibility}
+                    $isHighlight={pathname === path}
+                >
+                    {title}
+                </S.NavbarLinksButton>
+            ))}
+        </S.NavbarLinks>
+    ) : null;
 }
