@@ -1,6 +1,6 @@
 # Rick and Morty Hub
 
-DESCRIPTION
+Discover Rick and Morty episodes with our dedicated Front-End project. An easy and engaging experience for fans of the most eccentric duo in animation. Have fun exploring the multiverse with just a few clicks!
 
 ## Images
 
